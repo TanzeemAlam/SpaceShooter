@@ -17,8 +17,8 @@
     height = height || image.height;
     
     return {
-      draw: function(canvas, x, y) {
-        canvas.drawImage(
+      draw: function(ctx, x, y) {
+        ctx.drawImage(
           image,
           sourceX,
           sourceY,
@@ -31,11 +31,11 @@
         );
       },
       
-      fill: function(canvas, x, y, width, height, repeat) {
+      fill: function(ctx, x, y, width, height, repeat) {
         repeat = repeat || "repeat";
-        var pattern = canvas.createPattern(image, repeat);
-        canvas.fillColor(pattern);
-        canvas.fillRect(x, y, width, height);
+        var pattern = ctx.createPattern(image, repeat);
+        ctx.fillColor(pattern);
+        ctx.fillRect(x, y, width, height);
       },
       
       width: width,
