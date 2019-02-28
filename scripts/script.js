@@ -226,8 +226,9 @@ function Enemy(I) {
 	};
 
 	I.explode = function() {
-		//Sound.play("shoot");
-		//ctx.drawImage(explodeImage,this.x,this.y, this.width, this.height);
+		Sound.play("explosion");
+		setInterval(function() {
+			ctx.drawImage(explodeImage,this.x,this.y, this.width, this.height);},3000);
 		this.active = false;
 	};
 
