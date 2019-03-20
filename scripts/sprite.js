@@ -33,9 +33,9 @@
       
       fill: function(ctx, x, y, width, height, repeat) {
         repeat = repeat || "repeat";
-        var pattern = ctx.createPattern(image, repeat);
-        ctx.fillColor(pattern);
-        ctx.fillRect(x, y, width, height);
+        var pattern = canvas.createPattern(image, repeat);
+        canvas.fillColor(pattern);
+        canvas.fillRect(x, y, width, height);
       },
       
       width: width,
