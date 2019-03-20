@@ -30,7 +30,24 @@ var1 = setInterval(function() {
 
 //Update function
 function update(){
-	
+	/*
+	//moving left
+			if(keydown.left){
+				player.x-=8;
+			}
+			
+			//moving right
+			if(keydown.right)
+			{
+				player.x+=8;
+			}
+			
+			//for shooting
+			if(keydown.space)
+			{
+				player.shoot();
+			}
+	*/
 	$(document).keydown(function(e) {
     			switch(e.which) {
 				case 37: //left
